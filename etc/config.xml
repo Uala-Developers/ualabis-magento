@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <bis>
+                <payment_action>capture</payment_action>
+                <model>Uala\Bis\Model\Vpos</model>
+                <active>0</active>
+                <title>Ualá Bis</title>
+                <order_status>pending</order_status>
+                <message>Serás redirigido a Ualá Bis para completar el pago</message>
+                <granttype>client_credentials</granttype>     
+            </bis>
+        </payment>
+    </default>
+</config>

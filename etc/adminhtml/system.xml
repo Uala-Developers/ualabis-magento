@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+                <group id="bis" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Uala Bis Payment</label>
+
+                    <field id="credentials" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Credenciales</label>
+                        <source_model>Uala\Bis\Model\Config\Backend\Options</source_model>
+                        <backend_model>Uala\Bis\Model\Config\Backend\User</backend_model>
+                         <comment><![CDATA[<script type='text/javascript'>
+                        document.getElementsByName("groups[bis][fields][credentials][value]")[0].addEventListener('change', function(){
+                            if (document.getElementsByName("groups[bis][fields][credentials][value]")[0].value=="prod") 
+                            {
+                            var url = 'https://web.prod.adquirencia.ar.ua.la/?callbackUrl=https://'+window.location.hostname+'/bis/payment/credentials'
+                            MyWindow=window.open(url,'MyWindow','width=900,height=600');
+                            }
+                            });
+                        </script>]]></comment>
+                    </field>
+
+                    <field id="title" translate="label comment" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Title</label>
+                        <comment>You can change this message</comment>
+                    </field>
+
+                    <field id="message" translate="label comment" sortOrder="3" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                        <label>Checkout Message</label>
+                        <comment>You can change this message</comment>
+                    </field>
+
+                    <field id="active" translate="label" type="select" showInDefault="1" canRestore="1">
+                        <label>Enabled</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+
+                    <field id="sort_order" translate="label" sortOrder="500" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>Payment Method Sort Order</label>
+                        <validate>integer</validate>
+                    </field>
+
+                </group>
+        </section>
+    </system>
+</config>
