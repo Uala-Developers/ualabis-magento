@@ -1,18 +1,29 @@
 {
-    "name": "uala/bis-payment",
-    "description": "Uala Bis Payment Module",
-    "type": "magento2-module",
-    "version": "0.1.0",
-    "require": {
-      "php": "^7.0.0"
-    },
-    "license": [
-      "MIT"
-    ],
-    "autoload": {
-      "files": [ "registration.php" ],
-      "psr-4": {
-        "Uala\\Bis\\": ""
-      }
+  "name": "uala-bis/ualabis-magento",
+  "description": "Ualá Bis Magento Payment Module",
+  "require": {
+    "php": "^7.0.0"
+  },
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Ualá Bis",
+      "email": "developers.ualabis@uala.com.ar",
+      "homepage": "https://developers.ualabis.com.ar",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "developers.ualabis@uala.com.ar"
+  },
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [ "registration.php" ],
+    "psr-4": {
+      "Uala\\Bis\\": ""
     }
   }
+}
